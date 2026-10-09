@@ -1,0 +1,7 @@
+build/
+build-*/
+*.o
+moc_*
+qrc_*
+.qmake.stash
+Makefile

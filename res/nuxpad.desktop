@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=Application
-Name=Notepad
+Name=Nuxpad
 GenericName=Text Editor
 Comment=A clone of the Windows 11 Notepad
-Exec=notepad %F
-Icon=notepad
+Exec=nuxpad %F
+Icon=nuxpad
 Terminal=false
 Categories=Utility;TextEditor;
 MimeType=text/plain;
-StartupWMClass=notepad
-Keywords=text;editor;notepad;
+StartupWMClass=nuxpad
+Keywords=text;editor;notepad;nuxpad;

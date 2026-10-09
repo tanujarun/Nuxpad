@@ -260,8 +260,8 @@ SettingsPage::SettingsPage(QWidget *parent)
             emit wordWrapChanged(on);
     });
 
-    // Opening Notepad
-    list->addWidget(sectionLabel(tr("Opening Notepad"), column));
+    // Opening Nuxpad
+    list->addWidget(sectionLabel(tr("Opening Nuxpad"), column));
     auto *openingCard = new SettingCard(tr("Opening files"), tr("Choose where your files are opened"), column);
     m_opening = makeCombo(openingCard, 240);
     m_opening->addItem(tr("Open in a new tab"));
@@ -273,7 +273,7 @@ SettingsPage::SettingsPage(QWidget *parent)
             emit openInNewTabChanged(index == 0);
     });
 
-    auto *startCard = new SettingCard(tr("When Notepad starts"), QString(), column);
+    auto *startCard = new SettingCard(tr("When Nuxpad starts"), QString(), column);
     m_startValue = new DimLabel(QString(), startCard, 14);
     m_startValue->setWordWrap(false);
     startCard->addHeaderWidget(m_startValue);
@@ -293,7 +293,7 @@ SettingsPage::SettingsPage(QWidget *parent)
 
     // About
     list->addWidget(sectionLabel(tr("About this app"), column));
-    auto *about = new QLabel(tr("Notepad for Linux %1").arg(QStringLiteral(NOTEPAD_VERSION)), column);
+    auto *about = new QLabel(tr("Nuxpad %1").arg(QStringLiteral(NUXPAD_VERSION)), column);
     about->setFont(Theme::uiFont(14));
     list->addWidget(about);
     list->addWidget(new DimLabel(

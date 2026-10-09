@@ -4,7 +4,7 @@
 #include <QString>
 
 // One tab as remembered between runs. Unsaved text lives in its own buffer
-// file, so closing Notepad never asks and never loses anything.
+// file, so closing Nuxpad never asks and never loses anything.
 struct SessionTab {
     QString id;
     QString path;            // empty for an untitled document
@@ -19,7 +19,7 @@ struct SessionTab {
 
 namespace Session {
 
-QString directory();                               // ~/.local/state/notepad
+QString directory();                               // ~/.local/state/nuxpad
 QList<SessionTab> load(int *activeIndex);
 void save(const QList<SessionTab> &tabs, int activeIndex);
 

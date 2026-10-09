@@ -6,7 +6,7 @@
 namespace {
 QSettings settingsFile()
 {
-    return QSettings(QSettings::IniFormat, QSettings::UserScope, QStringLiteral("notepad"), QStringLiteral("notepad"));
+    return QSettings(QSettings::IniFormat, QSettings::UserScope, QStringLiteral("nuxpad"), QStringLiteral("nuxpad"));
 }
 }
 

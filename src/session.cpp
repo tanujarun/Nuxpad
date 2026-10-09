@@ -21,7 +21,7 @@ QString bufferPath(const QString &id)
 
 QString directory()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericStateLocation) + QStringLiteral("/notepad");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericStateLocation) + QStringLiteral("/nuxpad");
 }
 
 QList<SessionTab> load(int *activeIndex)

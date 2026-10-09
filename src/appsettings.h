@@ -14,7 +14,7 @@ struct FontChoice {
     bool italic = false;
 };
 
-// Everything Notepad remembers between runs (~/.config/notepad/notepad.ini).
+// Everything Nuxpad remembers between runs (~/.config/nuxpad/nuxpad.ini).
 struct AppSettings {
     Theme::Mode theme = Theme::Mode::System;
     FontChoice font;
@@ -22,7 +22,7 @@ struct AppSettings {
     bool wordWrap = false;
     bool statusBar = true;
     bool openInNewTab = true;       // "Opening files": new tab instead of a new window
-    bool continueSession = true;    // "When Notepad starts": continue previous session
+    bool continueSession = true;    // "When Nuxpad starts": continue previous session
     TextFile::LineEnding defaultLineEnding = TextFile::Lf;
     QSize windowSize = QSize(1136, 640);
     QString lastDirectory;

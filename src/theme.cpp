@@ -174,11 +174,11 @@ bool systemIsDark()
 void init()
 {
     for (const char *f : { ":/fonts/selawk.ttf", ":/fonts/selawkb.ttf", ":/fonts/selawksb.ttf",
-                           ":/fonts/NotepadMono-Regular.ttf", ":/fonts/NotepadMono-Bold.ttf" })
+                           ":/fonts/NuxpadMono-Regular.ttf", ":/fonts/NuxpadMono-Bold.ttf" })
         QFontDatabase::addApplicationFont(QString::fromLatin1(f));
 
     s_ui = firstAvailable({ "Segoe UI Variable Text", "Segoe UI Variable", "Segoe UI", "Selawik" }, "sans-serif");
-    s_mono = firstAvailable({ "Consolas", "Notepad Mono" }, "monospace");
+    s_mono = firstAvailable({ "Consolas", "Nuxpad Mono" }, "monospace");
     s_notifier = new Notifier;
 
     resolveColors();
@@ -232,7 +232,7 @@ QFont editorFont(const QString &family, int pointSize, int weight, bool italic, 
 
 QIcon appIcon()
 {
-    static const QIcon icon(QStringLiteral(":/notepad.svg"));
+    static const QIcon icon(QStringLiteral(":/nuxpad.svg"));
     return icon;
 }
 

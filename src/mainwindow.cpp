@@ -434,7 +434,7 @@ void MainWindow::refreshTab(Document *doc)
 void MainWindow::updateWindowTitle()
 {
     Document *doc = current();
-    setWindowTitle((doc ? titleOf(doc) : tr("Untitled")) + tr(" - Notepad"));
+    setWindowTitle((doc ? titleOf(doc) : tr("Untitled")) + tr(" - Nuxpad"));
 }
 
 void MainWindow::updateStatus()
@@ -462,7 +462,7 @@ bool MainWindow::loadInto(Document *doc, const QString &path, TextFile::Encoding
 {
     const TextFile::Document file = TextFile::load(path, encoding);
     if (!file.ok) {
-        ContentDialog::message(this, tr("Notepad"), nativePath(path) + QLatin1Char('\n') + file.error + QLatin1Char('.'));
+        ContentDialog::message(this, tr("Nuxpad"), nativePath(path) + QLatin1Char('\n') + file.error + QLatin1Char('.'));
         return false;
     }
     doc->editor->setPlainText(file.text);
@@ -509,14 +509,14 @@ void MainWindow::openPaths(const QStringList &paths)
                 path += QStringLiteral(".txt");
             } else {
                 const int answer = ContentDialog::ask(
-                    this, tr("Notepad"),
+                    this, tr("Nuxpad"),
                     tr("Cannot find the %1 file.\n\nDo you want to create a new file?").arg(nativePath(path)),
                     { tr("Yes"), tr("No") }, 0, 1);
                 if (answer != 0)
                     continue;
                 QString error;
                 if (!TextFile::save(path, QString(), TextFile::Utf8, m_settings.defaultLineEnding, &error)) {
-                    ContentDialog::message(this, tr("Notepad"), nativePath(path) + QLatin1Char('\n') + error + QLatin1Char('.'));
+                    ContentDialog::message(this, tr("Nuxpad"), nativePath(path) + QLatin1Char('\n') + error + QLatin1Char('.'));
                     continue;
                 }
             }
@@ -553,7 +553,7 @@ bool MainWindow::writeFile(Document *doc, const QString &path, TextFile::Encodin
     const QString text = doc->editor->toPlainText();
     if (encoding == TextFile::Ansi && !TextFile::fitsAnsi(text)) {
         const int answer = ContentDialog::ask(
-            this, tr("Notepad"),
+            this, tr("Nuxpad"),
             tr("This file contains characters in Unicode format which will be lost if you save this file as an "
                "ANSI encoded text file. To keep the Unicode information, click Cancel below and then select one "
                "of the Unicode options from the Encoding drop down list. Continue?"),
@@ -563,7 +563,7 @@ bool MainWindow::writeFile(Document *doc, const QString &path, TextFile::Encodin
     }
     QString error;
     if (!TextFile::save(path, text, encoding, doc->lineEnding, &error)) {
-        ContentDialog::message(this, tr("Notepad"), nativePath(path) + QLatin1Char('\n') + error + QLatin1Char('.'));
+        ContentDialog::message(this, tr("Nuxpad"), nativePath(path) + QLatin1Char('\n') + error + QLatin1Char('.'));
         return false;
     }
     doc->encoding = encoding;
@@ -598,7 +598,7 @@ bool MainWindow::confirmClose(Document *doc)
         return true;
     m_tabBar->setCurrentIndex(indexOf(doc));
     const QString name = doc->path.isEmpty() ? titleOf(doc) : nativePath(doc->path);
-    const int answer = ContentDialog::ask(this, tr("Notepad"), tr("Do you want to save changes to %1?").arg(name),
+    const int answer = ContentDialog::ask(this, tr("Nuxpad"), tr("Do you want to save changes to %1?").arg(name),
                                           { tr("Save"), tr("Don't save"), tr("Cancel") }, 0, 2);
     if (answer == 0)
         return save(doc);
@@ -981,7 +981,7 @@ bool MainWindow::find(bool backward)
         found = document->find(needle, edge, flags);
     }
     if (found.isNull()) {
-        ContentDialog::message(this, tr("Notepad"), tr("Cannot find \"%1\"").arg(needle));
+        ContentDialog::message(this, tr("Nuxpad"), tr("Cannot find \"%1\"").arg(needle));
         return false;
     }
     e->setTextCursor(found);
@@ -1068,7 +1068,7 @@ void MainWindow::goTo()
             e->setFocus();
             return;
         }
-        ContentDialog::message(this, tr("Notepad - Go to line"),
+        ContentDialog::message(this, tr("Nuxpad - Go to line"),
                                tr("The line number is beyond the total number of lines"));
     }
 }

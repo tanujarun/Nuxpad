@@ -6,7 +6,7 @@
 class QStyleOptionSlider;
 class QStyleOptionMenuItem;
 
-// WinUI rendering of the controls Notepad uses: menu bar, flyout menus,
+// WinUI rendering of the controls Nuxpad uses: menu bar, flyout menus,
 // overlay scroll bars, buttons, text boxes, combo boxes, radio buttons.
 class FluentStyle : public QProxyStyle
 {

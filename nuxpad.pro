@@ -1,10 +1,10 @@
 TEMPLATE = app
-TARGET = notepad
+TARGET = nuxpad
 QT += core gui widgets printsupport svg network
 CONFIG += c++20 release warn_on
 CONFIG -= debug_and_release
 
-DEFINES += QT_NO_CAST_FROM_BYTEARRAY NOTEPAD_VERSION=\\\"2.0\\\"
+DEFINES += QT_NO_CAST_FROM_BYTEARRAY NUXPAD_VERSION=\\\"2.0\\\"
 
 HEADERS += \
     src/appsettings.h \
@@ -39,7 +39,7 @@ SOURCES += \
     src/theme.cpp \
     src/widgets.cpp
 
-RESOURCES += res/notepad.qrc
+RESOURCES += res/nuxpad.qrc
 
 OBJECTS_DIR = obj
 MOC_DIR = moc
@@ -48,6 +48,6 @@ RCC_DIR = rcc
 # Test build only (qmake CONFIG+=devhooks): scripted input and window grabs.
 devhooks {
     QT += testlib
-    DEFINES += NOTEPAD_DEVHOOKS
+    DEFINES += NUXPAD_DEVHOOKS
     SOURCES += src/devscript.cpp
 }

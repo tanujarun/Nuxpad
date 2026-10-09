@@ -1,12 +1,12 @@
 <RCC>
   <qresource prefix="/">
-    <file>notepad.svg</file>
+    <file>nuxpad.svg</file>
   </qresource>
   <qresource prefix="/fonts">
     <file alias="selawk.ttf">fonts/selawk.ttf</file>
     <file alias="selawkb.ttf">fonts/selawkb.ttf</file>
     <file alias="selawksb.ttf">fonts/selawksb.ttf</file>
-    <file alias="NotepadMono-Regular.ttf">fonts/NotepadMono-Regular.ttf</file>
-    <file alias="NotepadMono-Bold.ttf">fonts/NotepadMono-Bold.ttf</file>
+    <file alias="NuxpadMono-Regular.ttf">fonts/NuxpadMono-Regular.ttf</file>
+    <file alias="NuxpadMono-Bold.ttf">fonts/NuxpadMono-Bold.ttf</file>
   </qresource>
 </RCC>

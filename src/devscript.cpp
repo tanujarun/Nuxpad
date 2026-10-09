@@ -1,4 +1,4 @@
-// Test build only. Runs the semicolon-separated steps in NOTEPAD_DEV_SCRIPT:
+// Test build only. Runs the semicolon-separated steps in NUXPAD_DEV_SCRIPT:
 // real key and mouse events through Qt's input pipeline, window grabs to PNG
 // and state dumps, so behaviour and looks can be checked without touching the
 // user's own pointer or keyboard.

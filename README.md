@@ -48,3 +48,8 @@ adds `NUXPAD_DEV_SCRIPT`, a list of scripted steps (keys, clicks, window grabs, 
 check behaviour and looks without touching the real pointer or keyboard. See `src/devscript.cpp`.
 Set `XDG_CONFIG_HOME` and `XDG_STATE_HOME` to scratch directories for such runs; an instance with its
 own state directory never talks to the Nuxpad you have open.
+
+## License
+
+The code is under the MIT License (see `LICENSE`). The bundled fonts in `res/fonts` are under the
+SIL Open Font License; their license texts are next to them.
